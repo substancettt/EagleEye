@@ -5,7 +5,6 @@ import android.util.*;
 import java.io.*;
 import android.provider.*;
 import android.content.*;
-import android.os.storage.*;
 import android.database.*;
 import android.location.*;
 import android.os.*;
@@ -19,14 +18,14 @@ public class FileStorage
     private static boolean CODE_DEBUG = false;
     public static final String DIRECTORY = "/mnt/extsd/DCIM";
     private static boolean[] FILE_LOCK_FLAG;
-    private static int FILE_LOCK_MAX = 0;
+//    private static int FILE_LOCK_MAX = 0;
     public static final long FULL_STORAGE_THRESHOLD = 104857600L;
     public static final String LOCK_DIR = "/mnt/extsd/DCIM/LOCK";
     public static final long LOW_STORAGE_THRESHOLD = 209715200L;
     public static final String PHTOT_DIR = "/mnt/extsd/DCIM/PIC";
     public static final long PICTURE_SIZE = 1500000L;
     public static final long PREPARING = -2L;
-    private static final String TAG = "FileStorage";
+//    private static final String TAG = "FileStorage";
     public static final int THUMB_SIZE = 100;
     public static final long UNAVAILABLE = -1L;
     public static final long UNKNOWN_SIZE = -3L;
@@ -52,7 +51,7 @@ public class FileStorage
         FileStorage.mVideoTitle = new String[4];
         FileStorage.mImageFilename = new String[4];
         FileStorage.mVideoFilename = new String[4];
-        FileStorage.FILE_LOCK_MAX = 20;
+//        FileStorage.FILE_LOCK_MAX = 20;
         FileStorage.FILE_LOCK_FLAG = new boolean[] { false, false, false, false };
     }
     
@@ -81,6 +80,9 @@ public class FileStorage
                     catch (Throwable t) {
                         Log.d("FileStorage", "Failed to write MediaStore" + t);
                         final Uri insert = uri;
+                        if (FileStorage.CODE_DEBUG) {
+                            Log.d("FileStorage", "AddImageToMediaStore uri :" + insert);
+                        }
                         continue;
                     }
                 }
@@ -120,6 +122,9 @@ public class FileStorage
                     catch (Throwable t) {
                         Log.d("FileStorage", "Failed to write MediaStore" + t);
                         final Object insert = file;
+                        if (FileStorage.CODE_DEBUG) {
+                            Log.d("FileStorage", "AddImageToMediaStore uri :" + insert);
+                        }
                         continue;
                     }
                 }

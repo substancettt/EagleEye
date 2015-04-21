@@ -92,9 +92,9 @@ public class CrashHandler implements UncaughtExceptionHandler
     @Override
     public void uncaughtException(final Thread thread, final Throwable t) {
         this.handleException(t);
-//        FireEyeShare.getFireEyeConfig(this.mContext).setAppErrorExit(true);
-//        FireEyeShare.getFireEyeConfig(this.mContext).setIsRecordingBeforeError(FireEyeAction.getRecordingStatus());
-//        FireEyeAction.uncaughtExceptionStopRecording();
+        FireEyeShare.getFireEyeConfig(this.mContext).setAppErrorExit(true);
+        FireEyeShare.getFireEyeConfig(this.mContext).setIsRecordingBeforeError(FireEyeAction.getRecordingStatus());
+        FireEyeAction.uncaughtExceptionStopRecording();
         this.mDefaultHandler.uncaughtException(thread, t);
     }
 }

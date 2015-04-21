@@ -1,5 +1,6 @@
 package com.wellshang.eagleeye.main;
 
+import com.wellshang.eagleeye.minishow.*;
 import android.view.*;
 import android.app.*;
 import java.util.*;
@@ -8,6 +9,7 @@ public class MyApp extends Application
 {
     private static List<Activity> activityList;
     private static MyApp app;
+    private MiniFireEye miniFireEye;
     private WindowManager wm;
     private WindowManager.LayoutParams wmFloatBtnParams;
     private WindowManager.LayoutParams wmMiniParams;
@@ -78,6 +80,10 @@ public class MyApp extends Application
         return this.wmParams;
     }
     
+    public MiniFireEye getMiniFireEye() {
+        return this.miniFireEye;
+    }
+    
     public WindowManager getWindowManagerInstence() {
         if (this.wm == null) {
             this.wm = (WindowManager)this.getSystemService("window");
@@ -89,6 +95,10 @@ public class MyApp extends Application
         super.onCreate();
         MyApp.app = this;
         MyApp.activityList = new LinkedList<Activity>();
-//        CrashHandler.getInstance().init(this.getApplicationContext());
+        CrashHandler.getInstance().init(this.getApplicationContext());
+    }
+    
+    public void setMiniFireEye(final MiniFireEye miniFireEye) {
+        this.miniFireEye = miniFireEye;
     }
 }
