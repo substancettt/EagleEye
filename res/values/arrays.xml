@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_spinner">
+        <item>视频(未锁)</item>
+        <item>视频(加锁)</item>
+        <item>照片</item>
+    </string-array>
+    <string-array name="front_back_text">
+        <item>前视+后视</item>
+        <item>只看前视</item>
+        <item>只看后视</item>
+    </string-array>
+</resources>

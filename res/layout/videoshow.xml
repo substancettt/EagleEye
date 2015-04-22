@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/bg_2" android:layout_width="fill_parent" android:layout_height="480.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/set_data_rl" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <Button android:textSize="18.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/is_back" android:background="@drawable/btn_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/is_back_str" android:onClick="back" />
+        <Button android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/today_color" android:layout_gravity="center_horizontal" android:id="@id/is_today" android:background="@drawable/bg_time" android:layout_width="100.0dip" android:layout_height="100.0dip" android:text="@string/today" android:layout_below="@id/is_back" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/is_today" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <Button android:textSize="18.0dip" android:textColor="@android:color/white" android:id="@id/select_spinner_id" android:background="@drawable/btn_radio" android:layout_width="100.0dip" android:layout_height="50.0dip" />
+            <Button android:textSize="18.0dip" android:textColor="@android:color/white" android:id="@id/front_back_spinner" android:background="@drawable/btn_radio" android:layout_width="100.0dip" android:layout_height="50.0dip" />
+            <Button android:textSize="18.0dip" android:textColor="@android:color/white" android:id="@id/month_spinner" android:background="@drawable/btn_radio" android:layout_width="100.0dip" android:layout_height="50.0dip" />
+            <Button android:textSize="18.0dip" android:textColor="@android:color/white" android:id="@id/day_spinner" android:background="@drawable/btn_radio" android:layout_width="100.0dip" android:layout_height="50.0dip" />
+        </LinearLayout>
+        <Button android:id="@id/v_switch_btn" android:background="@drawable/video_switch_h" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/video_fl" android:background="@drawable/bg96" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/set_data_rl">
+        <GridView android:scrollbarAlwaysDrawHorizontalTrack="true" android:id="@id/videoshow_gridview" android:background="@null" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="20.0dip" android:verticalSpacing="20.0dip" android:numColumns="3" />
+        <ListView android:scrollbarAlwaysDrawHorizontalTrack="true" android:id="@id/videoshow_listview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:divider="@drawable/btn_line" />
+    </FrameLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <TextView android:textSize="23.0dip" android:textColor="#ffff0000" android:id="@id/sorry_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sorry2" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/progressBar1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@android:style/Widget.ProgressBar.Inverse" />
+</RelativeLayout>

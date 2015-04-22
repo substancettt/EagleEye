@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/menu_set_select_view" android:background="@drawable/saturtion_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="100.0px" />
+    <ListView android:id="@id/listview_set" android:layout_width="200.0dip" android:layout_height="299.0dip" android:layout_marginTop="110.0dip" />
+</LinearLayout>

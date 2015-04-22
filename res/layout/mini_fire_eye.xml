@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/camera_mini_bg" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SurfaceView android:id="@id/mini_preview" android:background="@*android:color/transparent" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <ImageButton android:id="@id/preview_switch" android:background="#00000000" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/preview_switch_off" android:layout_alignParentLeft="true" />
+    <TextView android:id="@id/mini_recording_flag" android:visibility="gone" android:layout_marginTop="10.0dip" android:drawableLeft="@drawable/camera_recording_label_red" android:layout_centerHorizontal="true" style="@style/TextRecordingFlag" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:id="@id/car_reversing_scale_mini" android:background="#00000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/camera_car_reversing" android:scaleType="fitXY" android:layout_alignParentBottom="true" />
+        <SeekBar android:id="@id/car_reversing_seekbar_mini" android:visibility="gone" android:scrollbars="none" android:clickable="false" android:layout_width="300.0dip" android:layout_height="300.0dip" android:layout_marginRight="30.0dip" android:max="100" android:progress="50" android:progressDrawable="@*android:color/transparent" android:thumb="@drawable/thumb" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:rotation="90.0" />
+    </RelativeLayout>
+</RelativeLayout>

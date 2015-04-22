@@ -2818,7 +2818,7 @@ public class FireEye extends Activity implements FireEyeActionListener, TextToSp
         this.sendBroadcast(new Intent("com.wisky.full_screen_on"));
         this.requestWindowFeature(1);
         this.getWindow().setFlags(1024, 1024);
-        this.setContentView(2130903041);
+        this.setContentView(R.layout.eagle_eye);
         this.initRecordLayout();
         MyApp.getInstance().addActivity(this);
         FireEye.mRecorder = FireEyeShare.getCameraRecorder();
@@ -2833,15 +2833,15 @@ public class FireEye extends Activity implements FireEyeActionListener, TextToSp
         if (FireEye.CODE_DEBUG) {
             Log.d(FireEye.TAG, "mContentResolver = " + this.mContentResolver);
         }
-        FireEye.fSurfaceView = (SurfaceView)this.findViewById(2131361793);
+        FireEye.fSurfaceView = (SurfaceView)this.findViewById(R.id.front_preview_id);
         FireEye.fSurfaceView.getHolder().addCallback(this.frontCallback);
         this.mConfig.setFrontSurfaceView(FireEye.fSurfaceView);
-        FireEye.bSurfaceView = (SurfaceView)this.findViewById(2131361792);
+        FireEye.bSurfaceView = (SurfaceView)this.findViewById(R.id.back_preview_id);
         FireEye.bSurfaceView.getHolder().addCallback(this.backCallback);
         this.mConfig.setBackSurfaceView(FireEye.bSurfaceView);
         FireEye.bSurfaceView.setZOrderMediaOverlay(true);
-        this.CarReversingScale = (ImageView)this.findViewById(2131361801);
-        this.CarReversingSeekBar = (SeekBar)this.findViewById(2131361802);
+        this.CarReversingScale = (ImageView)this.findViewById(R.id.car_reversing_scale);
+        this.CarReversingSeekBar = (SeekBar)this.findViewById(R.id.car_reversing_seekbar);
         this.setListener();
         this.locationManager = (LocationManager)this.getSystemService("location");
         final Location lastKnownLocation = this.locationManager.getLastKnownLocation("gps");
@@ -2915,8 +2915,8 @@ public class FireEye extends Activity implements FireEyeActionListener, TextToSp
         else if (this.getIntent().getIntExtra("is_first", 1) == 0) {}
         this.pm = (PowerManager)this.getSystemService("power");
         (this.wl = this.pm.newWakeLock(1, FireEye.TAG)).acquire();
-        FireEye.float_button = View.inflate(this.getApplicationContext(), 2130903042, (ViewGroup)null);
-        (FireEye.float_btn = (Button)FireEye.float_button.findViewById(2131361803)).setOnTouchListener(this.mTouchListener);
+        FireEye.float_button = View.inflate(this.getApplicationContext(), R.layout.float_button, (ViewGroup)null);
+        (FireEye.float_btn = (Button)FireEye.float_button.findViewById(R.id.float_btn)).setOnTouchListener(this.mTouchListener);
         this.mHandler.sendEmptyMessageDelayed(12, 100L);
         if (this.mConfig.getLedLight()) {
 //            Gpio.writeGpio('H', 11, 1);

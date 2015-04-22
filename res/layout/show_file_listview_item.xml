@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/listview_item_bg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/list_rl" android:background="@drawable/no_pic" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/listview_img" android:layout_width="230.0dip" android:layout_height="150.0dip" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="25.0dip" android:textColor="@*android:color/black" android:id="@id/listview_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:text="@string/is_time" android:layout_toRightOf="@id/list_rl" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/listview_is_play_img" android:background="@drawable/play_img" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="65.0dip" android:layout_centerVertical="true" />
+    <ImageView android:background="@drawable/arrar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

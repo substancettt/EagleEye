@@ -1,20 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
+    <style name="OnScreenHintTextAppearance">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@*android:color/primary_text_dark</item>
+        <item name="android:textColorHighlight">#ffff9200</item>
+        <item name="android:textColorHint">#ff808080</item>
+        <item name="android:textColorLink">#ff5c5cff</item>
     </style>
-
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    <style name="OnScreenHintTextAppearance.Small" parent="@style/OnScreenHintTextAppearance">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@*android:color/secondary_text_dark</item>
     </style>
-
+    <style name="Animation_OnScreenHint">
+        <item name="android:windowEnterAnimation">@anim/on_screen_hint_enter</item>
+        <item name="android:windowExitAnimation">@anim/on_screen_hint_exit</item>
+    </style>
+    <style name="TextRecordingTime">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">@*android:color/white</item>
+        <item name="android:background">@drawable/bg_text_on_recording</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">28.0dip</item>
+    </style>
+    <style name="TextRecordingFlag">
+        <item name="android:background">@drawable/bg_text_on_recording</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:layout_width">60.0dip</item>
+        <item name="android:layout_height">28.0dip</item>
+    </style>
+    <style name="ButtonSetting">
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:layout_width">45.0dip</item>
+        <item name="android:layout_height">45.0dip</item>
+    </style>
+    <style name="ButtonShortCut">
+        <item name="android:background">@drawable/bg_shortcut_button</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:layout_width">60.0dip</item>
+        <item name="android:layout_height">28.0dip</item>
+        <item name="android:layout_margin">5.0dip</item>
+    </style>
+    <style name="ListViewSetItem">
+        <item name="android:background">@drawable/bg_text_on_recording</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:paddingTop">5.0dip</item>
+        <item name="android:paddingRight">5.0dip</item>
+        <item name="android:paddingBottom">5.0dip</item>
+    </style>
+    <style name="ListViewRadioButton">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@*android:color/white</item>
+    </style>
+    <style name="ListViewSwitchItem">
+        <item name="android:background">@drawable/bg_text_on_recording</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+    </style>
+    <style name="ListViewTitleText">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@*android:color/white</item>
+    </style>
+    <style name="MenuSetItem">
+        <item name="android:gravity">left</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:paddingRight">5.0dip</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+    </style>
+    <style name="ReviewThumbnail">
+        <item name="android:layout_width">52.0dip</item>
+        <item name="android:layout_height">52.0dip</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="notfullscreen">
+        <item name="android:windowBackground">@drawable/mini_preview_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@*android:style/Animation.Translucent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>

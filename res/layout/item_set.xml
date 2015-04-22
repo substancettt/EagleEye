@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/item_set_id" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListViewSetItem"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/radioButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" style="@style/ListViewTitleText" />
+    <ImageView android:id="@id/item_set_img" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

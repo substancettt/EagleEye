@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/shortcut_mute_id" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/shortcut_mute" style="@style/ButtonShortCut" />
+    <ImageButton android:id="@id/shortcut_preview_id" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/shortcut_preview" android:layout_toRightOf="@id/shortcut_mute_id" style="@style/ButtonShortCut" />
+    <ImageButton android:id="@id/shortcut_pip_id" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/shortcut_pip" android:layout_toRightOf="@id/shortcut_preview_id" style="@style/ButtonShortCut" />
+</RelativeLayout>

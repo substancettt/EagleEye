@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="160.0dip" android:layout_height="28.0dip" android:layout_marginLeft="400.0dip" android:layout_marginTop="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/recording_flag" android:visibility="gone" android:drawableLeft="@drawable/camera_recording_label_red" android:layout_alignParentLeft="true" style="@style/TextRecordingFlag" />
+    <TextView android:id="@id/recording_time" android:visibility="gone" android:text="@string/recording_time_labels" android:layout_alignParentRight="true" style="@style/TextRecordingTime" />
+</RelativeLayout>

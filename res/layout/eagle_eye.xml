@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/front_preview_id" layout="@layout/front_preview" />
+    <include android:id="@id/back_preview_id" layout="@layout/back_preview" />
+    <include android:id="@id/menu_cmd_id" layout="@layout/menu_cmd" />
+    <include android:id="@id/record_button_id" layout="@layout/record_button" />
+    <include android:id="@id/list_switch_id" layout="@layout/list_switch" />
+    <RelativeLayout android:layout_width="680.0px" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:id="@id/menu_set_id" layout="@layout/menu_set" />
+            <include android:id="@id/list_set_id" layout="@layout/list_set" />
+        </LinearLayout>
+        <include android:id="@id/shortcut_button_id" layout="@layout/shortcut_button" />
+        <include android:id="@id/record_labels_id" layout="@layout/record_labels" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:id="@id/car_reversing_scale" android:background="#00000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/camera_car_reversing" android:scaleType="fitXY" android:layout_alignParentBottom="true" />
+        <SeekBar android:id="@id/car_reversing_seekbar" android:visibility="gone" android:scrollbars="none" android:clickable="false" android:layout_width="300.0dip" android:layout_height="300.0dip" android:layout_marginRight="30.0dip" android:max="100" android:progress="50" android:progressDrawable="@android:color/transparent" android:thumb="@drawable/thumb" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:rotation="90.0" />
+    </RelativeLayout>
+</RelativeLayout>
